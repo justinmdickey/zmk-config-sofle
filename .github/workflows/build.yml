@@ -29,8 +29,8 @@ jobs:
       fail-fast: false
       matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
     steps:
-      - name: Install distutils/setuptools for Python 3.12
-        run: python3 -m pip install setuptools
+      - name: Install distutils for Python 3.12
+        run: apt-get update && apt-get install -y python3-distutils
       - name: Prepare variables
         id: variables
         run: |
