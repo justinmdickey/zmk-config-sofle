@@ -14,7 +14,7 @@ jobs:
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - name: Install distutils/setuptools for Python 3.12
-        run: python3 -m pip install setuptools
+        run: pip install setuptools
       - id: set-matrix
         name: Fetch Build Matrix
         run: |
