@@ -30,7 +30,7 @@ jobs:
       matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
     steps:
       - name: Install distutils for Python 3.12
-        run: pip install setuptools
+        run: apt update && apt install -y python3-setuptools
       - name: Prepare variables
         id: variables
         run: |
